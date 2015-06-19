@@ -1,0 +1,321 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10366,        311]
+NotebookOptionsPosition[     10011,        294]
+NotebookOutlinePosition[     10355,        309]
+CellTagsIndexPosition[     10312,        306]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"this", " ", "is", " ", "a", " ", "comment"}], " ", "*)"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"x", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", " ", ",", " ", "2", ",", " ", "3"}], "}"}], ",", 
+      RowBox[{"Range", "[", 
+       RowBox[{"4", ",", "6"}], "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+   RowBox[{"x", "[", 
+    RowBox[{"[", "1", "]"}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "#vectors", "\n", 
+   RowBox[{"1", ":", "4"}], "\n", 
+   RowBox[{"#can", " ", "use", " ", "c", 
+    RowBox[{"(", ")"}], " ", "to", " ", "concatanate", " ", "things", " ", 
+    "together"}], "\n", 
+   RowBox[{"c", 
+    RowBox[{"(", 
+     RowBox[{"1", ",", "1", ",", "2", ",", "4"}], ")"}]}], "\n", 
+   RowBox[{"c", 
+    RowBox[{"(", 
+     RowBox[{"1", ",", "1", ",", 
+      RowBox[{"2", ":", "4"}]}], ")"}]}], "\n", 
+   RowBox[{"x", "<", 
+    RowBox[{
+     RowBox[{"-", "c"}], 
+     RowBox[{"(", 
+      RowBox[{"1", ",", "1", ",", "2", ",", "4"}], ")"}]}]}], "\n", "x", "\n", 
+   RowBox[{"length", 
+    RowBox[{"(", "x", ")"}]}], "\n", 
+   RowBox[{"class", 
+    RowBox[{"(", "x", ")"}], " ", 
+    RowBox[{"#means", "'"}], "a", " ", "vector", " ", "composed", " ", "of", 
+    " ", "numeric", " ", 
+    RowBox[{"values", "'"}]}], "\[IndentingNewLine]", "\n", "#logicals", "\n", 
+   RowBox[{"x", "\[Equal]", 
+    RowBox[{"2", " ", "#get", " ", "TRUEs", " ", "and", " ", "FALSEs"}]}], 
+   "\n", 
+   RowBox[{"x", ">", "2"}], "\n", 
+   RowBox[{"x", "<", "3"}], "\n", 
+   RowBox[{"x", "\[GreaterEqual]", 
+    RowBox[{
+    "4", " ", "#more", " ", "than", " ", "or", " ", "equal", " ", "to"}]}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"#subsetting", " ", 
+    RowBox[{"vectors", ":", 
+     RowBox[{"subset", " ", "with", " ", "sq", " ", "brackets"}]}]}], "\n", 
+   RowBox[{"x", "[", "1", "]"}], "\n", 
+   RowBox[{"x", "[", "2", "]"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "[", 
+      RowBox[{"x", ">", "2"}], "]"}], " ", "#can", " ", "use", " ", 
+     "logicals", " ", "to", " ", "subset"}], ",", 
+    RowBox[{"very", " ", "handy"}]}], "\[IndentingNewLine]", "\n", 
+   "#matrices", "\n", 
+   RowBox[{"y", "<", 
+    RowBox[{
+     RowBox[{"-", "matrix"}], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"1", ":", "4"}], ",", "2", ",", "2"}], ")"}]}]}], "\n", 
+   RowBox[{"class", 
+    RowBox[{"(", "y", ")"}]}], "\n", 
+   RowBox[{"nrow", 
+    RowBox[{"(", "y", ")"}]}], "\n", 
+   RowBox[{"ncol", 
+    RowBox[{"(", "y", ")"}]}], "\n", 
+   RowBox[{"length", 
+    RowBox[{"(", "y", ")"}]}], "\n", 
+   RowBox[{"#subsetting", " ", "matrices"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "[", 
+      RowBox[{"1", ",", "2"}], "]"}], " ", "#", " ", "row", " ", "number"}], 
+    ",", 
+    RowBox[{"col", " ", "number"}]}], "\n", 
+   RowBox[{
+    RowBox[{"y", "[", 
+     RowBox[{",", "1"}], "]"}], " ", "#first", " ", "column"}], "\n", 
+   RowBox[{
+    RowBox[{"y", "[", 
+     RowBox[{"2", ","}], "]"}], " ", "#first", " ", "row"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"#list", ":", 
+    RowBox[{
+    "how", " ", "we", " ", "take", " ", "a", " ", "lot", " ", "of", " ", 
+     "different", " ", "things", " ", "and", " ", "combine", " ", "them"}]}], 
+   "\n", 
+   RowBox[{"myList", "<", 
+    RowBox[{"-", 
+     RowBox[{"(", 
+      RowBox[{"x", ",", "y"}], ")"}]}]}], "\n", "myList", "\n", 
+   RowBox[{"class", 
+    RowBox[{"(", "myList", ")"}]}], "\n", 
+   RowBox[{"str", 
+    RowBox[{"(", "myList", ")"}], " ", "#useful", " ", "for", " ", "looking", 
+    " ", "at", " ", "lists"}], "\n", 
+   RowBox[{
+   "#subset", " ", "lists", " ", "using", " ", "double", " ", "sq", " ", 
+    "brackets"}], "\n", 
+   RowBox[{"myList", "[", 
+    RowBox[{"[", "1", "]"}], "]"}], "\n", 
+   RowBox[{"myList", "[", 
+    RowBox[{"[", "2", "]"}], "]"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"#array", "=", 
+    RowBox[{"N", " ", "dimensional", " ", "matrix"}]}], "\n", 
+   RowBox[{"z", "<", 
+    RowBox[{
+     RowBox[{"-", "array"}], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"1", ":", "8"}], ",", 
+       RowBox[{"dim", "=", 
+        RowBox[{"c", 
+         RowBox[{"(", 
+          RowBox[{"2", ",", "2", ",", "2"}], ")"}]}]}]}], ")"}]}]}], "\n", 
+   "z", "\n", 
+   RowBox[{"class", 
+    RowBox[{"(", "z", ")"}]}], "\n", 
+   RowBox[{"dim", 
+    RowBox[{"(", "z", ")"}]}], "\n", 
+   RowBox[{"dimnames", 
+    RowBox[{"(", "z", ")"}], " ", "#has", " ", "no", " ", "dimnames"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"#let", "'"}], "s", " ", "set", " ", "some"}], ",", 
+    RowBox[{"needs", " ", "to", " ", "be", " ", "a", " ", "list"}]}], "\n", 
+   RowBox[{
+    RowBox[{"dimnames", 
+     RowBox[{"(", "z", ")"}]}], "<", 
+    RowBox[{
+     RowBox[{"-", "list"}], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"c", 
+        RowBox[{"(", 
+         RowBox[{"\"\<hello\>\"", ",", "\"\<goodbye\>\""}], ")"}]}], ",", 
+       RowBox[{"c", 
+        RowBox[{"(", 
+         RowBox[{"\"\<beatles\>\"", ",", "\"\<metallica\>\""}], ")"}]}], ",", 
+       RowBox[{"c", 
+        RowBox[{"(", 
+         RowBox[{"\"\<yes\>\"", ",", "\"\<no\>\""}], ")"}]}]}], ")"}]}]}], 
+   "\n", "z", "\n", 
+   RowBox[{"dimnames", 
+    RowBox[{"(", "z", ")"}]}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "#so", " ", "dimnames", " ", "needs", " ", "to", " ", "be", " ", 
+      "manipulated", " ", "like", " ", "a", " ", "list"}], "..."}], " ", 
+    "because", " ", "it", " ", "is", " ", "a", " ", "list"}], "\n", 
+   RowBox[{"dimnames", 
+    RowBox[{
+     RowBox[{"(", "z", ")"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], " ", "#dimnames", " ", 
+    RowBox[{"for", "'"}], 
+    RowBox[{"rows", "'"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"i", ".", "e", ".", "first"}], " ", "dimension"}], ")"}]}], 
+   "\n", 
+   RowBox[{"dimnames", 
+    RowBox[{
+     RowBox[{"(", "z", ")"}], "[", 
+     RowBox[{"[", "2", "]"}], "]"}], " ", "#dimnames", " ", 
+    RowBox[{"for", "'"}], 
+    RowBox[{"columns", "'"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"i", ".", "e", ".", "second"}], " ", "dimension"}], ")"}]}], 
+   "\n", 
+   RowBox[{"dimnames", 
+    RowBox[{
+     RowBox[{"(", "z", ")"}], "[", 
+     RowBox[{"[", "3", "]"}], "]"}], " ", "#dimnames", " ", "for", " ", 
+    "third", " ", "dimension", " ", "of", " ", "array"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"#function", "-", 
+    RowBox[{
+    "how", " ", "we", " ", "do", " ", "things", " ", "in", " ", "R"}]}], "\n", 
+   RowBox[{"myFunction", "<", 
+    RowBox[{
+     RowBox[{"-", "function"}], 
+     RowBox[{"(", 
+      RowBox[{"x", ",", "y", ",", 
+       RowBox[{"z", "=", "2"}]}], ")"}], 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+       "#stuff", " ", "happens", " ", "to", " ", "the", " ", "input", " ", 
+        "in", " ", "here", " ", "res"}], "<", 
+       RowBox[{
+        RowBox[{"-", "x"}], "+", 
+        RowBox[{"y", " ", "res"}]}], "<", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "res"}], "/", "z"}], " ", "res"}]}], "}"}]}]}], "\n", 
+   RowBox[{
+   "#and", " ", "then", " ", "we", " ", "run", " ", "the", " ", "function"}], 
+   "\n", 
+   RowBox[{"myFunction", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"x", "=", "1"}], ",", 
+      RowBox[{"y", "=", "2"}]}], ")"}]}], "\n", 
+   RowBox[{"myFunction", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"x", "=", "2"}], ",", 
+      RowBox[{"y", "=", "2"}]}], ")"}]}], "\n", 
+   RowBox[{"myFunction", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"x", "=", "2"}], ",", 
+      RowBox[{"y", "=", "1"}]}], ")"}]}], "\n", 
+   RowBox[{"myFunction", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"x", "=", "1"}], ",", 
+      RowBox[{"y", "=", "1"}]}], ")"}]}], "\n", 
+   RowBox[{
+   "#arguments", " ", "that", " ", "have", " ", "default", " ", "settings", 
+    " ", 
+    RowBox[{"(", 
+     RowBox[{"like", " ", "z"}], ")"}], " ", 
+    RowBox[{"don", "'"}], "t", " ", "have", " ", "to", " ", "be", " ", 
+    "given"}], "\n", 
+   RowBox[{
+    RowBox[{
+    "#but", " ", "if", " ", "you", " ", "do", " ", "give", " ", "them"}], ",", 
+    RowBox[{"that", " ", "changes", " ", "the", " ", "function"}]}], "\n", 
+   RowBox[{"myFunction", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"x", "=", "1"}], ",", 
+      RowBox[{"y", "=", "2"}], ",", 
+      RowBox[{"z", "=", "4"}]}], ")"}]}], "\n", 
+   RowBox[{"myFunction", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"x", "=", "1"}], ",", 
+      RowBox[{"y", "=", "2"}], ",", 
+      RowBox[{"z", "=", "6"}]}], ")"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.6437256744177136`*^9, 3.643725682138155*^9}, {
+  3.643731867068913*^9, 3.6437320016856127`*^9}, {3.643733629053693*^9, 
+  3.6437336846938753`*^9}, {3.6437337259242334`*^9, 3.643733786842718*^9}, {
+  3.6437339004962187`*^9, 3.6437339488059816`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "5", ",", "6"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.643733730619502*^9, 3.6437337875677595`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "2", ",", "3"}], "}"}]], "Output",
+ CellChangeTimes->{{3.643733730619502*^9, 3.64373378757076*^9}}]
+}, Open  ]]
+},
+WindowSize->{759, 606},
+WindowMargins->{{Automatic, 184}, {27, Automatic}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 9002, 255, 1612, "Input"],
+Cell[9585, 279, 259, 7, 31, "Output"],
+Cell[9847, 288, 148, 3, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
